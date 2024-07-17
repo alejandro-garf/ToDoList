@@ -1,38 +1,40 @@
 # ToDo List Maker
 
 ## Overview
-ToDo List Maker is a simple C++ console application that allows users to manage their to-do list. The application supports adding, completing, and deleting to-do items, providing a clear and efficient way to keep track of tasks.
+ToDo List Maker is a simple C++ console application that allows users to manage their to-do list. The application supports adding, completing, and deleting to-do items, providing a clear and efficient way to keep track of tasks. It also ensures the security of the to-do list by encrypting it with a passkey.
 
 ## Features
 - **Add ToDo Items:** Users can add new tasks to their to-do list.
 - **Complete ToDo Items:** Users can mark tasks as completed.
 - **Delete ToDo Items:** Users can remove tasks from their to-do list.
+- **Passkey Protection:** The to-do list is encrypted and decrypted with a user-provided passkey.
+- **Persistent Storage:** The to-do list is saved to a file and encrypted for security.
 - **User-friendly Interface:** Clear console interface with options to manage tasks.
 
 ## Getting Started
 
 ### Prerequisites
 - A C++ compiler (e.g., GCC)
-- Standard C++ library
+- OpenSSL library for encryption and decryption
 
 ### Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/todo-list-maker.git
+    git clone https://github.com/alejandro-garf/ToDoList.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd todo-list-maker
+    cd ToDoList
     ```
 3. Compile the project:
     ```sh
-    g++ -o todolist main.cpp todolist.cpp
+    g++ -std=c++11 -o todo_app main.cpp -L/opt/homebrew/opt/openssl@3/lib -I/opt/homebrew/opt/openssl@3/include -lssl -lcrypto
     ```
 
 ## Usage
 Run the compiled program:
 ```sh
-./todolist
+./todo_app
 ```
 
 ### Main Menu Options
