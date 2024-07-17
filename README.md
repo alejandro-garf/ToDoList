@@ -41,62 +41,6 @@ Run the compiled program:
 - **[D]elete a ToDo Item:** Deletes a specified to-do item.
 - **[Q]uit program:** Exits the application.
 
-## File Structure
-```
-├── main.cpp
-├── todolist.h
-└── todolist.cpp
-```
-
-## Code Explanation
-
-### `main.cpp`
-The main application logic, handling user input and displaying the to-do list.
-
-### `todolist.h`
-Header file defining the `ToDoItem` class.
-
-```cpp
-#ifndef TODOLIST_H
-#define TODOLIST_H
-
-#include <iostream>
-#include <string>
-
-using namespace std;
-
-// Creating ToDoItem class
-class ToDoItem {
-    private:
-        int id;
-        string description;
-        bool completed;
-
-    public:
-        ToDoItem(): id(0), description(""), completed(false) {}
-        ~ToDoItem() = default;
-
-        bool create(string new_description){
-            // Generates a random integer between 1 and 100
-            id = rand() % 100 + 1;
-            description = new_description;
-            return true;
-        }
-
-        int getId() {return id; }
-        string getDescription() {return description; }
-        bool isCompleted() {return completed; }
-
-        bool setCompleted(bool val) { completed = val; return completed; }
-
-};
-
-#endif // TODOLIST_H
-```
-
-### `todolist.cpp`
-Implementation file for the `ToDoItem` class (if additional implementation is needed).
-
 ## License
 This project is licensed under the MIT License.
 
@@ -104,4 +48,4 @@ This project is licensed under the MIT License.
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Contact
-Created by [Your Name] - feel free to contact me at [your-email@example.com]
+Created by alejandro-garf - feel free to contact me at gaelfon1738@gmail.com
